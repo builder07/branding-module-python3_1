@@ -29,13 +29,13 @@ AC_SUBST(BOXTYPE)
 AC_DEFINE_UNQUOTED(BOXTYPE,"$BOXTYPE",[box type])
 
 AC_ARG_WITH(oever,
-	[  --with-oever=NAME oe name [[OE-A1,OE-A2,...]]],
-	[OE_VER="$withval"],[OE_VER="OE-Alliance 2.0"])
+	[  --with-oever=NUMBER oe number [[10.1,...]]],
+	[OE_VER="$withval"],[OE_VER=""])
 AC_SUBST(OE_VER)
-AC_DEFINE_UNQUOTED(OE_VER,"$OE_VER",[oe name])
+AC_DEFINE_UNQUOTED(OE_VER,"$OE_VER",[oe number])
 
 AC_ARG_WITH(distro,
-	[  --with-distro=NAME distro name [[openvix,openatv,...]]],
+	[  --with-distro=NAME distro name [[openvision,openvix,openatv,...]]],
 	[DISTRO="$withval"],[DISTRO="egami"])
 AC_SUBST(DISTRO)
 AC_DEFINE_UNQUOTED(DISTRO,"$DISTRO",[distro name])
@@ -256,6 +256,125 @@ AC_ARG_WITH(driverdate,
 AC_SUBST(DRIVERDATE)
 AC_DEFINE_UNQUOTED(DRIVERDATE,"$DRIVERDATE",[driver date])
 
+AC_ARG_WITH(visionversion,
+	[  --with-visionversion=NUMBER vision version [[number,...]]],
+	[VISIONVERSION="$withval"],[VISIONVERSION=""])
+AC_SUBST(VISIONVERSION)
+AC_DEFINE_UNQUOTED(VISIONVERSION,"$VISIONVERSION",[vision version])
+
+AC_ARG_WITH(visionrevision,
+	[  --with-visionrevision=NUMBER vision revision [[number,...]]],
+	[VISIONREVISION="$withval"],[VISIONREVISION=""])
+AC_SUBST(VISIONREVISION)
+AC_DEFINE_UNQUOTED(VISIONREVISION,"$VISIONREVISION",[vision revision])
+
+AC_ARG_WITH(developername,
+	[  --with-developername=NAME developer name [[persianprince,...]]],
+	[DEVELOPERNAME="$withval"],[DEVELOPERNAME=""])
+AC_SUBST(DEVELOPERNAME)
+AC_DEFINE_UNQUOTED(DEVELOPERNAME,"$DEVELOPERNAME",[developer name])
+
+AC_ARG_WITH(boxbrand,
+	[  --with-boxbrand=NAME box brand [[dreambox,...]]],
+	[BOXBRAND="$withval"],[BOXBRAND=""])
+AC_SUBST(BOXBRAND)
+AC_DEFINE_UNQUOTED(BOXBRAND,"$BOXBRAND",[box brand])
+
+AC_ARG_WITH(mtdbootfs,
+	[  --with-mtdbootfs=NAME mtdbootfs number [[mmcblk0p4,...]]],
+	[MTD_BOOTFS="$withval"],[MTD_BOOTFS=""])
+AC_SUBST(MTD_BOOTFS)
+AC_DEFINE_UNQUOTED(MTD_BOOTFS,"$MTD_BOOTFS",[mtdbootfs number])
+
+AC_ARG_WITH(forcemode,
+	[  --with-forcemode=NAME forcemode name [[no,...]]],
+	[FORCE_MODE="$withval"],[FORCE_MODE=""])
+AC_SUBST(FORCE_MODE)
+AC_DEFINE_UNQUOTED(FORCE_MODE,"$FORCE_MODE",[forcemode name])
+
+AC_ARG_WITH(tfpu,
+	[  --with-tfpu=NAME tfpu name [[soft,...]]],
+	[TFPU_TYPE="$withval"],[TFPU_TYPE=""])
+AC_SUBST(TFPU_TYPE)
+AC_DEFINE_UNQUOTED(TFPU_TYPE,"$TFPU_TYPE",[tfpu name])
+
+AC_ARG_WITH(small-flash,
+	[  --with-small-flash=NAME flash type [[smallflash,...]]],
+	[HAVE_SMALLFLASH="$withval"],[HAVE_SMALLFLASH="True"])
+AC_SUBST(HAVE_SMALLFLASH)
+AC_DEFINE_UNQUOTED(HAVE_SMALLFLASH,"$HAVE_SMALLFLASH",[smallflash])
+
+AC_ARG_WITH(middle-flash,
+	[  --with-middle-flash=NAME flash type [[middleflash,...]]],
+	[HAVE_MIDDLEFLASH="$withval"],[HAVE_MIDDLEFLASH="True"])
+AC_SUBST(HAVE_MIDDLEFLASH)
+AC_DEFINE_UNQUOTED(HAVE_MIDDLEFLASH,"$HAVE_MIDDLEFLASH",[middleflash])
+
+AC_ARG_WITH(transcoding,
+	[  --with-transcoding=NAME transcoding [[transcoding,...]]],
+	[HAVE_TRANSCODING="$withval"],[HAVE_TRANSCODING="True"])
+AC_SUBST(HAVE_TRANSCODING)
+AC_DEFINE_UNQUOTED(HAVE_TRANSCODING,"$HAVE_TRANSCODING",[transcoding])
+
+AC_ARG_WITH(multitranscoding,
+	[  --with-multitranscoding=NAME multitranscoding [[multitranscoding,...]]],
+	[HAVE_MULTITRANSCODING="$withval"],[HAVE_MULTITRANSCODING="True"])
+AC_SUBST(HAVE_MULTITRANSCODING)
+AC_DEFINE_UNQUOTED(HAVE_MULTITRANSCODING,"$HAVE_MULTITRANSCODING",[multitranscoding])
+
+AC_ARG_WITH(multilib,
+	[  --with-multilib=NAME multilib [[multilib,...]]],
+	[HAVE_MULTILIB="$withval"],[HAVE_MULTILIB="True"])
+AC_SUBST(HAVE_MULTILIB)
+AC_DEFINE_UNQUOTED(HAVE_MULTILIB,"$HAVE_MULTILIB",[multilib])
+
+AC_ARG_WITH(svideo,
+	[  --with-svideo=NAME svideo [[svideo......]]],
+	[HAVE_SVIDEO="$withval"],[HAVE_SVIDEO="True"])
+AC_SUBST(HAVE_SVIDEO)
+AC_DEFINE_UNQUOTED(HAVE_SVIDEO,"$HAVE_SVIDEO",[svideo])
+
+AC_ARG_WITH(blindscanbinary,
+	[  --with-blindscanbinary=NAME blindscan binary [[blindscan,...]]],
+	[BLINDSCANBINARY="$withval"],[BLINDSCANBINARY=""])
+AC_SUBST(BLINDSCANBINARY)
+AC_DEFINE_UNQUOTED(BLINDSCANBINARY,"$BLINDSCANBINARY",[blindscan binary])
+
+AC_ARG_WITH(socfamily,
+	[  --with-socfamily=NAME SoC family [[SoC,...]]],
+	[SOCFAMILY="$withval"],[SOCFAMILY=""])
+AC_SUBST(SOCFAMILY)
+AC_DEFINE_UNQUOTED(SOCFAMILY,"$SOCFAMILY",[SoC family])
+
+AC_ARG_WITH(vfd-symbol,
+	[  --with-vfd-symbol=NAME vfd symbol [[vfdsymbol,...]]],
+	[HAVE_VFDSYMBOL="$withval"],[HAVE_VFDSYMBOL="True"])
+AC_SUBST(HAVE_VFDSYMBOL)
+AC_DEFINE_UNQUOTED(HAVE_VFDSYMBOL,"$HAVE_VFDSYMBOL",[vfdsymbol])
+
+AC_ARG_WITH(kernelversion,
+	[  --with-kernelversion=NUMBER kernel version [[4,...]]],
+	[KERNELVERSION="$withval"],[KERNELVERSION=""])
+AC_SUBST(KERNELVERSION)
+AC_DEFINE_UNQUOTED(KERNELVERSION,"$KERNELVERSION",[kernel version])
+
+AC_ARG_WITH(rctype,
+	[  --with-rctype=NUMBER rc type [[0,...]]],
+	[RCTYPE="$withval"],[RCTYPE=""])
+AC_SUBST(RCTYPE)
+AC_DEFINE_UNQUOTED(RCTYPE,"$RCTYPE",[rc type])
+
+AC_ARG_WITH(rcname,
+	[  --with-rcname=NAME rc name [[dmm,...]]],
+	[RCNAME="$withval"],[RCNAME=""])
+AC_SUBST(RCNAME)
+AC_DEFINE_UNQUOTED(RCNAME,"$RCNAME",[rc name])
+
+AC_ARG_WITH(rcidnum,
+	[  --with-rcidnum=NUMBER rc id number [[2,...]]],
+	[RCIDNUM="$withval"],[RCIDNUM=""])
+AC_SUBST(RCIDNUM)
+AC_DEFINE_UNQUOTED(RCIDNUM,"$RCIDNUM",[rc id number])
 
 AC_ARG_WITH(debug,
 	AS_HELP_STRING([--without-debug],[disable debugging code]),
