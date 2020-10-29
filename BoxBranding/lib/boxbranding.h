@@ -50,5 +50,25 @@ char *_getHaveWWOL();
 char *_getHaveTranscoding1();
 char *_getHaveTranscoding2();
 char *_getHaveCI();
+char *_getVisionVersion();
+char *_getVisionRevision();
+char *_getDeveloperName();
+char *_getBoxBrand();
+char *_getMachineMtdBoot();
+char *_getForceMode();
+char *_getImageFPU();
+char *_getHaveSmallFlash();
+char *_getHaveMiddleFlash();
+char *_getHaveTranscoding();
+char *_getHaveMultiTranscoding();
+char *_getHaveMultiLib();
+char *_getHaveSVIDEO();
+char *_getBlindscanBin();
+char *_getSoCFamily();
+char *_getHaveVFDSymbol();
+char *_getKernelVersion();
+char *_getRCType();
+char *_getRCName();
+char *_getRCIDNum();
 
 #endif

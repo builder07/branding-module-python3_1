@@ -789,3 +789,199 @@ char *_getMachineProcModel() // return just value from proc entry
 	}
 	return strdup(MACHINE_NAME);
 }
+
+char *_getVisionVersion()
+{
+	return strdup(VISIONVERSION);
+}
+
+char *_getVisionRevision()
+{
+	return strdup(VISIONREVISION);
+}
+
+char *_getDeveloperName()
+{
+	return strdup(DEVELOPERNAME);
+}
+
+char *_getBoxBrand()
+{
+	return strdup(BOXBRAND);
+}
+
+char *_getMachineMtdBoot()
+{
+	return strdup(MTD_BOOTFS);
+}
+
+char *_getForceMode()
+{
+	return strdup(FORCE_MODE);
+}
+
+char *_getImageFPU()
+{
+	return strdup(TFPU_TYPE);
+}
+
+char *_getHaveSmallFlash()
+{
+	if(strcmp(HAVE_SMALLFLASH, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_SMALLFLASH);
+}
+
+char *_getHaveMiddleFlash()
+{
+	if(strcmp(HAVE_MIDDLEFLASH, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_MIDDLEFLASH);
+}
+
+char *_getHaveTranscoding()
+{
+	if(strcmp(HAVE_TRANSCODING, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_TRANSCODING);
+}
+
+char *_getHaveMultiTranscoding()
+{
+	if(strcmp(HAVE_MULTITRANSCODING, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_MULTITRANSCODING);
+}
+
+char *_getHaveMultiLib()
+{
+	if(strcmp(HAVE_MULTILIB, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_MULTILIB);
+}
+
+char *_getHaveSVIDEO()
+{
+	if(strcmp(HAVE_SVIDEO, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_SVIDEO);
+}
+
+char *_getBlindscanBin()
+{
+	return strdup(BLINDSCANBINARY);
+}
+
+char *_getSoCFamily()
+{
+	return strdup(SOCFAMILY);
+}
+
+char *_getHaveVFDSymbol()
+{
+	if(strcmp(HAVE_VFDSYMBOL, "False") == 0)
+		return strdup("");
+	return strdup(HAVE_VFDSYMBOL);
+}
+
+char *_getKernelVersion()
+{
+	return strdup(KERNELVERSION);
+}
+
+char *_getRCType()
+{
+	return strdup(RCTYPE);
+}
+
+char *_getRCName()
+{
+	char *boxtype_name = NULL;
+	if(strcmp(RCNAME, "ini0") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		if(strcmp(boxtype_name, "ini-3000") == 0)
+		{
+			free(boxtype_name);
+			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
+			if(startsWith(boxtype_name, "1"))
+			{
+				free(boxtype_name);
+				return strdup(RCNAME);
+			}
+			else
+			{
+				free(boxtype_name);
+				return strdup("ini2");
+			}
+		}
+		else if(strcmp(boxtype_name, "ini-5000") == 0)
+		{
+			free(boxtype_name);
+			return strdup("ini1");
+		}
+		else if(strcmp(boxtype_name, "ini-7000") == 0)
+		{
+			free(boxtype_name);
+			return strdup("ini1");
+		}
+		else if(strcmp(boxtype_name, "ini-7012") == 0)
+		{
+			free(boxtype_name);
+			return strdup("ini1");
+		}
+	}
+	else if(strcmp(RCNAME, "et9x00") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		if(strcmp(boxtype_name, "et9500") == 0)
+		{
+			free(boxtype_name);
+			return strdup("et9500");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(RCNAME);
+		}
+	}
+	else if(strcmp(RCNAME, "et6x00") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		if(strcmp(boxtype_name, "et6500") == 0)
+		{
+			free(boxtype_name);
+			return strdup("et6500");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(RCNAME);
+		}
+	}
+	else if(strcmp(RCNAME, "azboxhd") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/model");
+		if(strcmp(boxtype_name, "elite") == 0)
+		{
+			free(boxtype_name);
+			return strdup("azboxelite");
+		}
+		else if(strcmp(boxtype_name, "ultra") == 0)
+		{
+			free(boxtype_name);
+			return strdup("azboxelite");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(RCNAME);
+		}
+	}
+	return strdup(RCNAME);
+}
+
+char *_getRCIDNum()
+{
+	return strdup(RCIDNUM);
+}

@@ -56,6 +56,26 @@ MAKE_STRING_FUNCTION(getHaveWWOL)
 MAKE_STRING_FUNCTION(getHaveTranscoding1)
 MAKE_STRING_FUNCTION(getHaveTranscoding2)
 MAKE_STRING_FUNCTION(getHaveCI)
+MAKE_STRING_FUNCTION(getVisionVersion)
+MAKE_STRING_FUNCTION(getVisionRevision)
+MAKE_STRING_FUNCTION(getDeveloperName)
+MAKE_STRING_FUNCTION(getBoxBrand)
+MAKE_STRING_FUNCTION(getMachineMtdBoot)
+MAKE_STRING_FUNCTION(getForceMode)
+MAKE_STRING_FUNCTION(getImageFPU)
+MAKE_STRING_FUNCTION(getHaveSmallFlash)
+MAKE_STRING_FUNCTION(getHaveMiddleFlash)
+MAKE_STRING_FUNCTION(getHaveTranscoding)
+MAKE_STRING_FUNCTION(getHaveMultiTranscoding)
+MAKE_STRING_FUNCTION(getHaveMultiLib)
+MAKE_STRING_FUNCTION(getHaveSVIDEO)
+MAKE_STRING_FUNCTION(getBlindscanBin)
+MAKE_STRING_FUNCTION(getSoCFamily)
+MAKE_STRING_FUNCTION(getHaveVFDSymbol)
+MAKE_STRING_FUNCTION(getKernelVersion)
+MAKE_STRING_FUNCTION(getRCType)
+MAKE_STRING_FUNCTION(getRCName)
+MAKE_STRING_FUNCTION(getRCIDNum)
 
 /* Module specification */
 static PyMethodDef boxbrandingMethods[] = {
@@ -99,6 +119,26 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getHaveTranscoding1", getHaveTranscoding1, METH_NOARGS, NULL },
 	{ "getHaveTranscoding2", getHaveTranscoding2, METH_NOARGS, NULL },
 	{ "getHaveCI", getHaveCI, METH_NOARGS, NULL },
+	{ "getVisionVersion", getVisionVersion, METH_NOARGS, NULL },
+	{ "getVisionRevision", getVisionRevision, METH_NOARGS, NULL },
+	{ "getDeveloperName", getDeveloperName, METH_NOARGS, NULL },
+	{ "getBoxBrand", getBoxBrand, METH_NOARGS, NULL },
+	{ "getMachineMtdBoot", getMachineMtdBoot, METH_NOARGS, NULL },
+	{ "getForceMode", getForceMode, METH_NOARGS, NULL },
+	{ "getImageFPU", getImageFPU, METH_NOARGS, NULL },
+	{ "getHaveSmallFlash", getHaveSmallFlash, METH_NOARGS, NULL },
+	{ "getHaveMiddleFlash", getHaveMiddleFlash, METH_NOARGS, NULL },
+	{ "getHaveTranscoding", getHaveTranscoding, METH_NOARGS, NULL },
+	{ "getHaveMultiTranscoding", getHaveMultiTranscoding, METH_NOARGS, NULL },
+	{ "getHaveMultiLib", getHaveMultiLib, METH_NOARGS, NULL },
+	{ "getHaveSVIDEO", getHaveSVIDEO, METH_NOARGS, NULL },
+	{ "getBlindscanBin", getBlindscanBin, METH_NOARGS, NULL },
+	{ "getSoCFamily", getSoCFamily, METH_NOARGS, NULL },
+	{ "getHaveVFDSymbol", getHaveVFDSymbol, METH_NOARGS, NULL },
+	{ "getKernelVersion", getKernelVersion, METH_NOARGS, NULL },
+	{ "getRCType", getRCType, METH_NOARGS, NULL },
+	{ "getRCName", getRCName, METH_NOARGS, NULL },
+	{ "getRCIDNum", getRCIDNum, METH_NOARGS, NULL },
 	{ NULL, NULL, 0, NULL }
 };
 
