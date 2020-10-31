@@ -56,8 +56,8 @@ MAKE_STRING_FUNCTION(getHaveWWOL)
 MAKE_STRING_FUNCTION(getHaveTranscoding1)
 MAKE_STRING_FUNCTION(getHaveTranscoding2)
 MAKE_STRING_FUNCTION(getHaveCI)
-MAKE_STRING_FUNCTION(getVisionVersion)
-MAKE_STRING_FUNCTION(getVisionRevision)
+MAKE_STRING_FUNCTION(getOpenFIXVersion)
+MAKE_STRING_FUNCTION(getOpenFIXRevision)
 MAKE_STRING_FUNCTION(getDeveloperName)
 MAKE_STRING_FUNCTION(getBoxBrand)
 MAKE_STRING_FUNCTION(getMachineMtdBoot)
@@ -119,8 +119,8 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getHaveTranscoding1", getHaveTranscoding1, METH_NOARGS, NULL },
 	{ "getHaveTranscoding2", getHaveTranscoding2, METH_NOARGS, NULL },
 	{ "getHaveCI", getHaveCI, METH_NOARGS, NULL },
-	{ "getVisionVersion", getVisionVersion, METH_NOARGS, NULL },
-	{ "getVisionRevision", getVisionRevision, METH_NOARGS, NULL },
+	{ "getOpenFIXnVersion", getOpenFIXVersion, METH_NOARGS, NULL },
+	{ "getOpenFIXRevision", getOpenFIXRevision, METH_NOARGS, NULL },
 	{ "getDeveloperName", getDeveloperName, METH_NOARGS, NULL },
 	{ "getBoxBrand", getBoxBrand, METH_NOARGS, NULL },
 	{ "getMachineMtdBoot", getMachineMtdBoot, METH_NOARGS, NULL },
