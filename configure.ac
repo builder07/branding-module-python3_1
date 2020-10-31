@@ -256,20 +256,20 @@ AC_ARG_WITH(driverdate,
 AC_SUBST(DRIVERDATE)
 AC_DEFINE_UNQUOTED(DRIVERDATE,"$DRIVERDATE",[driver date])
 
-AC_ARG_WITH(visionversion,
-	[  --with-visionversion=NUMBER vision version [[number,...]]],
-	[VISIONVERSION="$withval"],[VISIONVERSION=""])
-AC_SUBST(VISIONVERSION)
-AC_DEFINE_UNQUOTED(VISIONVERSION,"$VISIONVERSION",[vision version])
+AC_ARG_WITH(openfixversion,
+	[  --with-openfixversion=NUMBER openfix version [[number,...]]],
+	[OPENFIXVERSION="$withval"],[OPENFIXVERSION=""])
+AC_SUBST(OPENFIXVERSION)
+AC_DEFINE_UNQUOTED(OPENFIXVERSION,"$OPENFIXVERSION",[openfix version])
 
-AC_ARG_WITH(visionrevision,
-	[  --with-visionrevision=NUMBER vision revision [[number,...]]],
-	[VISIONREVISION="$withval"],[VISIONREVISION=""])
-AC_SUBST(VISIONREVISION)
-AC_DEFINE_UNQUOTED(VISIONREVISION,"$VISIONREVISION",[vision revision])
+AC_ARG_WITH(openfixrevision,
+	[  --with-openfixrevision=NUMBER openfix revision [[number,...]]],
+	[OPENFIXREVISION="$withval"],[OPENFIXREVISION=""])
+AC_SUBST(OPENFIXREVISION)
+AC_DEFINE_UNQUOTED(OPENFIXREVISION,"$OPENFIXREVISION",[openfix revision])
 
 AC_ARG_WITH(developername,
-	[  --with-developername=NAME developer name [[persianprince,...]]],
+	[  --with-developername=NAME developer name [[qwerty,...]]],
 	[DEVELOPERNAME="$withval"],[DEVELOPERNAME=""])
 AC_SUBST(DEVELOPERNAME)
 AC_DEFINE_UNQUOTED(DEVELOPERNAME,"$DEVELOPERNAME",[developer name])
