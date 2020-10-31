@@ -790,14 +790,14 @@ char *_getMachineProcModel() // return just value from proc entry
 	return strdup(MACHINE_NAME);
 }
 
-char *_getVisionVersion()
+char *_getOpenFIXVersion()
 {
-	return strdup(VISIONVERSION);
+	return strdup(OPENFIXVERSION);
 }
 
-char *_getVisionRevision()
+char *_getOpenFIXRevision()
 {
-	return strdup(VISIONREVISION);
+	return strdup(OPENFIXREVISION);
 }
 
 char *_getDeveloperName()
