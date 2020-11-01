@@ -35,7 +35,7 @@ AC_SUBST(OE_VER)
 AC_DEFINE_UNQUOTED(OE_VER,"$OE_VER",[oe number])
 
 AC_ARG_WITH(distro,
-	[  --with-distro=NAME distro name [[openvision,openvix,openatv,...]]],
+	[  --with-distro=NAME distro name [[openfix,openvix,openatv,...]]],
 	[DISTRO="$withval"],[DISTRO="egami"])
 AC_SUBST(DISTRO)
 AC_DEFINE_UNQUOTED(DISTRO,"$DISTRO",[distro name])
