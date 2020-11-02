@@ -119,7 +119,7 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getHaveTranscoding1", getHaveTranscoding1, METH_NOARGS, NULL },
 	{ "getHaveTranscoding2", getHaveTranscoding2, METH_NOARGS, NULL },
 	{ "getHaveCI", getHaveCI, METH_NOARGS, NULL },
-	{ "getOpenFIXnVersion", getOpenFIXVersion, METH_NOARGS, NULL },
+	{ "getOpenFIXVersion", getOpenFIXVersion, METH_NOARGS, NULL },
 	{ "getOpenFIXRevision", getOpenFIXRevision, METH_NOARGS, NULL },
 	{ "getDeveloperName", getDeveloperName, METH_NOARGS, NULL },
 	{ "getBoxBrand", getBoxBrand, METH_NOARGS, NULL },
